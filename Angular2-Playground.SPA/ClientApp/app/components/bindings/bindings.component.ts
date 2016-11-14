@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'counter',
-    template: require('./counter.component.html')
+    selector: 'bindings',
+    template: require('./bindings.component.html')
 })
-export class CounterComponent {
+export class BindingsComponent {
     public currentCount = 0;
 
     public incrementCounter() {
