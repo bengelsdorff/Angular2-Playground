@@ -39,6 +39,7 @@ module.exports = {
         filename: '[name].js',
         library: '[name]_[hash]',
     },
+    devtool: isDevBuild ? 'source-map' : null,
     plugins: [
         extractCSS,
         new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery' }), // Maps these identifiers to the jQuery package (because Bootstrap expects it to be a global variable)
