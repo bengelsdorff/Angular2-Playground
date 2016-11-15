@@ -39,5 +39,6 @@
     "webpack-hot-middleware": "^2.10.0",
     "webpack-merge": "^0.14.1",
     "zone.js": "^0.6.21"
-  }
+  },
+  "scripts": { "start": "webpack-dev-server --content-base wwwroot/ --inline --hot --port 30000 --no-info --open --history-api-fallback" }
 }

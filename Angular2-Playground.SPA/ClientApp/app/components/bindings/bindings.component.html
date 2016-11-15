@@ -1,7 +1,40 @@
 <h2>Bindings</h2>
 
-<p>This is a simple example of an Angular 2 component.</p>
-
-<p>Current count: <strong>{{ currentCount }}</strong></p>
-
-<button (click)="incrementCounter()">Increment</button>
+<fieldset>
+    <h4>Interpolation e</h4>
+    <p> Component Value: <strong>{{ currentCount }}</strong></p>
+</fieldset>
+<fieldset>
+    <h4>Property Binding</h4>
+    <div>
+        Text Content:
+        <strong [textContent]="currentCount"></strong>
+    </div>
+    <div>
+        Value:
+        <input [value]="currentCount">
+    </div>
+    <div>
+        Image Url:
+        <img [src]="imageUrl">
+    </div>
+    <div>
+        Button Style:
+        <button [style.color]="isSpecial ? 'red' : 'green'" (click)="switchIsSpecial($event)">
+        {{isSpecial ? 'Turn  Special Off' : 'Turn  Special On'}}
+        </button>
+    </div>
+    <div>
+        <div [class.isSpecial]="isSpecial">Class based on a property</div>
+    </div>
+</fieldset>
+<fieldset>
+    <h4>Two-way Binding</h4>
+    <!--<input [(ngModel)]="heroName">-->
+</fieldset>
+<fieldset>
+    <h4>Event Binding</h4>
+    <button (click)="incrementCounter($event)">Increment</button>
+    <button (click)="decrementCounter($event)">Decrement</button>
+    <div>Value: <strong>{{ currentCount }}</strong></div>
+</fieldset>
