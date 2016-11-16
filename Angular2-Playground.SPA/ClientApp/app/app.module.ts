@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { UniversalModule } from 'angular2-universal';
 
-import { AppComponent } from './components/app/app.component'
+import { AppComponent } from './components/app/app.component';
 import { BindingsComponent } from './components/bindings/bindings.component';
 import { ComponentsComponent } from './components/components/components.component';
 import { DirectivesComponent } from './components/directives/directives.component';
+import { GitHubCornerComponent } from './components/githubcorner/githubcorner.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpComponent } from './components/http/http.component';
 import { ModelDrivenFormsComponent } from './components/modeldrivenforms/modeldrivenforms.component';
@@ -22,6 +23,7 @@ import { TemplateDrivenFormsComponent } from './components/templatedrivenforms/t
         BindingsComponent,
         ComponentsComponent,
         DirectivesComponent,
+        GitHubCornerComponent,
         HomeComponent,
         HttpComponent,
         ModelDrivenFormsComponent,
