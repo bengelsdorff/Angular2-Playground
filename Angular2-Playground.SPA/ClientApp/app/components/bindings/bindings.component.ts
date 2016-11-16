@@ -24,6 +24,4 @@ export class BindingsComponent {
         event.preventDefault();
         this.isSpecial = !this.isSpecial;
     }
-
-    
 }
