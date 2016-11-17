@@ -1,0 +1,74 @@
+<div class="page-header">
+    <h1>Bindings</h1>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Interpolation</h3>
+    </div>
+    <div class="panel-body"> Component Value: <strong>{{ currentCount }}</strong> </div>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Property Binding (input value)</h3>
+    </div>
+    <div class="panel-body"> <input [value]="currentCount"></div>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Property Binding (img src)</h3>
+    </div>
+    <div class="panel-body">  <img [src]="imageUrl"></div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Interpolation</div>
+  <div class="panel-body">
+    Component Value: <strong>{{ currentCount }}</strong>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Panel title</h3>
+  </div>
+  <div class="panel-body">
+    Panel content
+  </div>
+</div>
+<!--<fieldset>
+    <h4>Property Binding</h4>
+    <div>
+        Text Content:
+        <strong [textContent]="currentCount"></strong>
+    </div>
+    <div>
+        Value:
+        <input [value]="currentCount">
+    </div>
+    <div>
+        Image Url:
+        <img [src]="imageUrl">
+    </div>
+    <div>
+        Button Style:
+        <button [style.color]="isSpecial ? 'red' : 'green'" (click)="switchIsSpecial($event)">
+        {{isSpecial ? 'Turn  Special Off' : 'Turn  Special On'}}
+        </button>
+    </div>
+    <div>
+        <div [class.isSpecial]="isSpecial">Class based on a property</div>
+    </div>
+</fieldset>
+<fieldset>
+    <h4>Two-way Binding</h4>
+    <input [(ngModel)]="heroName">
+</fieldset>
+<fieldset>
+    <h4>Event Binding</h4>
+    <button (click)="incrementCounter($event)">Increment</button>
+    <button (click)="decrementCounter($event)">Decrement</button>
+    <div>Value: <strong>{{ currentCount }}</strong></div>
+</fieldset>-->
