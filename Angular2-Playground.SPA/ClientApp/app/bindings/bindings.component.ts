@@ -2,26 +2,31 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'bindings',
-    template: require('./bindings.component.html'),
-    styles: [require('./bindings.component.css')]
+    template: require('./bindings.component.html')
 })
 export class BindingsComponent {
-    public currentCount = 0;
-    public isSpecial = true;
-    public isSelected = false;
-    public imageUrl = 'http://ofbiz-vm2.apache.org:28080/images/products/GZ-1000/small.png';
+    public homeBadges = 42;
+    public profileBadges = 0;
+    public messagesBadges = 3;
+    public optionActive = 'home';
 
-    public incrementCounter(event: Event ) {
+    public clickHome(event: Event) {
         event.preventDefault();
-        this.currentCount++;
+        this.homeBadges++;
+        this.optionActive = 'home';
     }
 
-    public decrementCounter(event: Event) {
+    public clickProfile(event: Event) {
         event.preventDefault();
-        this.currentCount--;
+        this.profileBadges++;
+        this.optionActive = 'profile';
     }
-    public switchIsSpecial(event: Event) {
+
+    public clickMessages(event: Event) {
         event.preventDefault();
-        this.isSpecial = !this.isSpecial;
+        this.messagesBadges++;
+        this.optionActive = 'messages';
     }
+
+
 }
