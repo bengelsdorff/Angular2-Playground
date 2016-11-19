@@ -5,10 +5,10 @@ import { Component } from '@angular/core';
     template: require('./bindings.component.html')
 })
 export class BindingsComponent {
-    public homeBadges = 42;
-    public profileBadges = 0;
-    public messagesBadges = 3;
-    public optionActive = 'home';
+     homeBadges = 42;
+     profileBadges = 0;
+     messagesBadges = 3;
+     optionActive = 'home';
 
     public clickHome(event: Event) {
         event.preventDefault();
