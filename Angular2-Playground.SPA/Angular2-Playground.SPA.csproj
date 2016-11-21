@@ -1,72 +1,68 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
   <PropertyGroup>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
-    <PreserveCompilationContext>true</PreserveCompilationContext>
-    <AssemblyName>Angular2-Playground.SPA</AssemblyName>
     <OutputType>Exe</OutputType>
-    <PackageTargetFallback Condition=" '$(TargetFramework)' == 'netcoreapp1.1' ">$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
+    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
   </PropertyGroup>
+  <PropertyGroup>
+    <PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wp8+wpa81;</PackageTargetFallback>
+  </PropertyGroup>
   <ItemGroup>
-    <Compile Include="**\*.cs" />
-    <EmbeddedResource Include="**\*.resx" />
-    <EmbeddedResource Include="compiler\resources\**\*" />
-    <Content Include="appsettings.json;ClientApp\dist\**\*;node_modules\**\*;Views\**\*;web.config;wwwroot\**\*">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
+    <Compile Include="*.cs" Exclude="$(GlobalExclude)" />
+    <EmbeddedResource Include="*.resx" Exclude="$(GlobalExclude)" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161104-2</Version>
-      <PrivateAssets>All</PrivateAssets>
+    <PackageReference Include="Microsoft.NET.Sdk.Web">
+      <Version>1.0.0-alpha-20161104-2-112</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.NETCore.App">
-      <Version>1.1.0</Version>
+      <Version>1.0.1</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.AngularServices">
       <Version>1.0.0-*</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics">
-      <Version>1.1.0</Version>
+      <Version>1.0.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Mvc">
-      <Version>1.1.0</Version>
+      <Version>1.0.1</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Server.IISIntegration">
-      <Version>1.1.0</Version>
+      <Version>1.0.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel">
-      <Version>1.1.0</Version>
+      <Version>1.0.1</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles">
-      <Version>1.1.0</Version>
+      <Version>1.0.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables">
-      <Version>1.1.0</Version>
+      <Version>1.0.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Configuration.Json">
-      <Version>1.1.0</Version>
+      <Version>1.0.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine">
-      <Version>1.1.0</Version>
+      <Version>1.0.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Logging">
-      <Version>1.1.0</Version>
+      <Version>1.0.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Logging.Console">
-      <Version>1.1.0</Version>
+      <Version>1.0.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Logging.Debug">
-      <Version>1.1.0</Version>
+      <Version>1.0.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions">
-      <Version>1.1.0</Version>
+      <Version>1.0.0</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools">
-      <Version>1.0.0-msbuild1-final</Version>
+    <DotNetCliToolReference Include="BundlerMinifier.Core">
+      <Version>2.2.301</Version>
     </DotNetCliToolReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
@@ -76,9 +72,6 @@
     <Exec Command="npm install" />
     <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js --env.prod" />
     <Exec Command="node node_modules/webpack/bin/webpack.js --env.prod" />
-  </Target>
-  <Target Name="PostpublishScript" AfterTargets="Publish" Condition=" '$(IsCrossTargetingBuild)' != 'true' ">
-    <Exec Command="dotnet publish-iis --publish-folder $(TargetDir) --framework $(TargetFrameworkIdentifier),Version=$(TargetFrameworkVersion)" />
   </Target>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
