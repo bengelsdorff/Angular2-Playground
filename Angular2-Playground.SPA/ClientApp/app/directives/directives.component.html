@@ -1,12 +1,12 @@
 <div class="page-header">
     <h1>Directives</h1>
 </div>
-<panel title="ngIf" class="col-lg-12">
+<panel title="*ngIf" class="col-lg-12">
     <p *ngIf="clubsList.length == 4">There are 4 clubs!</p>
     <a (click)="clickRemoveClub($event)" href="#">Remove club</a>
 </panel>
 
-<panel title="ngFor" class="col-lg-12">
+<panel title="*ngFor" class="col-lg-12">
     <div class="row" ng2>
         <div class="col-xs-6 col-md-3" *ngFor="let club of clubsList">
             <a href="#" class="thumbnail">

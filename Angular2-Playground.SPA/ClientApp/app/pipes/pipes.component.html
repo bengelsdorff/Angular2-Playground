@@ -1,3 +1,105 @@
 <div class="page-header">
     <h1>Pipes</h1>
 </div>
+<panel title="| number | currency | percent" class="col-lg-6">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-lg-6">
+                <label for="country">value</label>
+                <input id="country" readonly="readonly" type="text" class="form-control" value="{{piNumber}}">
+            </div>
+            <div class="col-lg-6">
+                <label for="country">value | number:'1.0-2'</label>
+                <input id="country" readonly="readonly" type="text" class="form-control" value="{{piNumber | number:'1.0-2'}}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <label for="country">value</label>
+                <input id="country" readonly="readonly" type="text" class="form-control" value="{{piNumber}}">
+            </div>
+            <div class="col-lg-6">
+                <label for="country">value | currency:'EUR':true:'1.2-2'</label>
+                <input id="country" readonly="readonly" type="text" class="form-control" value="{{piNumber | currency:'EUR':true:'1.2-2'}}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <label for="country">value</label>
+                <input id="country" readonly="readonly" type="text" class="form-control" value="{{piNumber}}">
+            </div>
+            <div class="col-lg-6">
+                <label for="country">value | percent:'2.0-2'</label>
+                <input id="country" readonly="readonly" type="text" class="form-control" value="{{piNumber | percent:'1.0-2'}}">
+            </div>
+        </div>
+    </div>
+</panel>
+<panel title="| date" class="col-lg-6">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-lg-6">
+                <label for="country">value</label>
+                <input id="country" readonly="readonly" type="text" class="form-control" value="{{todayDate}}">
+            </div>
+            <div class="col-lg-6">
+                <label for="country">value | date:short</label>
+                <input id="country" readonly="readonly" type="text" class="form-control" value="{{todayDate | date:'short'}}">
+            </div>
+            <div class="col-lg-6">
+                <label for="country">value</label>
+                <input id="country" readonly="readonly" type="text" class="form-control" value="{{todayDate}}">
+            </div>
+            <div class="col-lg-6">
+                <label for="country">value | date:'HH:mm'</label>
+                <input id="country" readonly="readonly" type="text" class="form-control" value="{{todayDate | date:'HH:mm'}}">
+            </div>
+            <div class="col-lg-6">
+                <label for="country">value</label>
+                <input id="country" readonly="readonly" type="text" class="form-control" value="{{todayDate}}">
+            </div>
+            <div class="col-lg-6">
+                <label for="country">value | date:'dd-MM-y'</label>
+                <input id="country" readonly="readonly" type="text" class="form-control" value="{{todayDate | date:'dd-MM-y'}}">
+            </div>
+        </div>
+    </div>
+</panel>
+<panel title="| slice" class="col-lg-6">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-lg-6">
+                <label for="country">value</label>
+                <input id="country" readonly="readonly" type="text" class="form-control" value="{{clubsList}}">
+            </div>
+            <div class="col-lg-6">
+                <label for="country">value | slice:1:3</label>
+                <input id="country" readonly="readonly" type="text" class="form-control" value="{{clubsList | slice:0:2}}">
+            </div>
+        </div>
+    </div>
+</panel>
+<panel title="| lowercase | uppercase" class="col-lg-6">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-lg-6">
+                <label for="country">value</label>
+                <input id="country" readonly="readonly" type="text" class="form-control" value="{{simpleText}}">
+            </div>
+            <div class="col-lg-6">
+                <label for="country">value | lowercase</label>
+                <input id="country" readonly="readonly" type="text" class="form-control" value="{{simpleText | lowercase}}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <label for="country">value</label>
+                <input id="country" readonly="readonly" type="text" class="form-control" value="{{simpleText}}">
+            </div>
+            <div class="col-lg-6">
+                <label for="country">value | uppercase</label>
+                <input id="country" readonly="readonly" type="text" class="form-control" value="{{simpleText | uppercase}}">
+            </div>
+        </div>
+    </div>
+</panel>

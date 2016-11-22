@@ -1,7 +1,7 @@
 <div class="page-header">
     <h1>Components</h1>
 </div>
-<panel title="Passing data between components"  class="col-lg-4">
-<country-list (selected)="onSelected($event)" [countries]="['Portugal', 'Spain', 'Italy']"></country-list>
-<country-detail [country]="country"></country-detail>
+<panel title="Passing data between components" class="col-lg-4">
+    <country-list (selected)="onSelected($event)" [countries]="['Portugal', 'Spain', 'Italy']"></country-list>
+    <country-detail [country]="country"></country-detail>
 </panel>
