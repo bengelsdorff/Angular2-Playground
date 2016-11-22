@@ -16,7 +16,6 @@ import { HttpComponent } from './http/http.component';
 import { ModelDrivenFormsComponent } from './modeldrivenforms/modeldrivenforms.component';
 import { NavMenuComponent } from './shared/components/navmenu/navmenu.component';
 import { PipesComponent } from './pipes/pipes.component';
-import { RoutingComponent } from './routing/routing.component';
 import { ServicesComponent } from './services/services.component';
 import { TemplateDrivenFormsComponent } from './templatedrivenforms/templatedrivenforms.component';
 import { PanelComponent } from './shared/components/panel/panel.component';
@@ -36,7 +35,6 @@ import { PanelComponent } from './shared/components/panel/panel.component';
         ModelDrivenFormsComponent,
         NavMenuComponent,
         PipesComponent,
-        RoutingComponent,
         ServicesComponent,
         TemplateDrivenFormsComponent,
         PanelComponent
@@ -53,7 +51,6 @@ import { PanelComponent } from './shared/components/panel/panel.component';
             { path: 'http', component: HttpComponent },
             { path: 'model-driven-forms', component: ModelDrivenFormsComponent },
             { path: 'pipes', component: PipesComponent },
-            { path: 'routing', component: RoutingComponent },
             { path: 'services', component: ServicesComponent },
             { path: 'template-driven-forms', component: TemplateDrivenFormsComponent },
             { path: '**', redirectTo: 'home' }

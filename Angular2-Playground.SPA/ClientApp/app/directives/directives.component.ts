@@ -5,11 +5,15 @@ import { Component } from '@angular/core';
     template: require('./directives.component.html')
 })
 export class DirectivesComponent {
-    clubsList = ['Benfica', 'Porto', 'Sporting', 'Braga'];
+    itemList = ['item', 'item', 'item', 'item'];
 
-    public clickRemoveClub(event: Event) {
+    public clickRemove(event: Event) {
         event.preventDefault();
-        this.clubsList.pop();
+        this.itemList.pop();
     }
 
+    public clickAdd(event: Event) {
+        event.preventDefault();
+        this.itemList.push('item');
+    }
 }
