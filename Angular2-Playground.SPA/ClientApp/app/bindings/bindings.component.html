@@ -17,8 +17,12 @@
 </panel>
 
 <panel title="Two-way Data Binding" class="col-lg-3">
-    <div class="input-group">
-        <span class="input-group-addon" id="basic-addon1">Messages: </span>
-        <input type="text" class="form-control" placeholder="No messages" aria-describedby="basic-addon1" [(ngModel)]="messagesBadges">
+    <div class="form-group">
+        <label for="home">Home: </label>
+        <input id="home" type="text" class="form-control" placeholder="No messages" [(ngModel)]="homeBadges">
+        <label for="profile">Profile: </label>
+        <input id="profile" type="text" class="form-control" placeholder="No messages" [(ngModel)]="profileBadges">
+        <label for="messages">Messages: </label>
+        <input id="messages" type="text" class="form-control" placeholder="No messages" [(ngModel)]="messagesBadges">
     </div>
 </panel>
