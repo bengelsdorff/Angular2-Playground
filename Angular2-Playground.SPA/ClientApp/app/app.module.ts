@@ -7,6 +7,8 @@ import { FormsModule }   from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BindingsComponent } from './bindings/bindings.component';
 import { ComponentsComponent } from './components/components.component';
+import { CountryDetailComponent } from './components/country.detail.component';
+import { CountryListComponent } from './components/country.list.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { GitHubCornerComponent } from './shared/components/githubcorner/githubcorner.component';
 import { HomeComponent } from './home/home.component';
@@ -25,6 +27,8 @@ import { PanelComponent } from './shared/components/panel/panel.component';
         AppComponent,
         BindingsComponent,
         ComponentsComponent,
+        CountryDetailComponent,
+        CountryListComponent,
         DirectivesComponent,
         GitHubCornerComponent,
         HomeComponent,

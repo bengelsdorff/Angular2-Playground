@@ -1,8 +1,7 @@
 <div class="page-header">
     <h1>Components</h1>
 </div>
-
-- Nesting components
-- Subscribe component events
-
-<panel title="Component one title"></panel>
+<panel title="Passing data between components"  class="col-lg-4">
+<country-list (selected)="onSelected($event)" [countries]="['Portugal', 'Spain', 'Italy']"></country-list>
+<country-detail [country]="country"></country-detail>
+</panel>

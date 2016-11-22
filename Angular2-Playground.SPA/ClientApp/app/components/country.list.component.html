@@ -1,0 +1,5 @@
+<panel title="List Component">
+  <div class="list-group">
+    <button *ngFor="let country of countries" (click)="clickCountry($event)" type="button" class="list-group-item">{{country}}</button>
+  </div>
+</panel>
