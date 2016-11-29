@@ -1,3 +1,28 @@
 <div class="page-header">
-    <h1>Services</h1>
+    <h1>Http</h1>
 </div>
+
+<panel title="Fetching data from the server" class="col-lg-12">
+    <p>This component demonstrates fetching data from the server.</p>
+
+    <p *ngIf="!weatherForecast"><em>Loading...</em></p>
+
+    <table class='table' *ngIf="weatherForecast">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Temp. (C)</th>
+                <th>Temp. (F)</th>
+                <th>Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let forecast of weatherForecast">
+                <td>{{ forecast.dateFormatted }}</td>
+                <td>{{ forecast.temperatureC }}</td>
+                <td>{{ forecast.temperatureF }}</td>
+                <td>{{ forecast.summary }}</td>
+            </tr>
+        </tbody>
+    </table>
+</panel>

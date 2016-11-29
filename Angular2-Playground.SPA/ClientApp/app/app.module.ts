@@ -12,7 +12,6 @@ import { CountryListComponent } from './components/country.list.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { GitHubCornerComponent } from './shared/components/githubcorner/githubcorner.component';
 import { HomeComponent } from './home/home.component';
-import { HttpComponent } from './http/http.component';
 import { ModelDrivenFormsComponent } from './modeldrivenforms/modeldrivenforms.component';
 import { NavMenuComponent } from './shared/components/navmenu/navmenu.component';
 import { PipesComponent } from './pipes/pipes.component';
@@ -31,7 +30,6 @@ import { PanelComponent } from './shared/components/panel/panel.component';
         DirectivesComponent,
         GitHubCornerComponent,
         HomeComponent,
-        HttpComponent,
         ModelDrivenFormsComponent,
         NavMenuComponent,
         PipesComponent,
@@ -48,7 +46,6 @@ import { PanelComponent } from './shared/components/panel/panel.component';
             { path: 'components', component: ComponentsComponent },
             { path: 'directives', component: DirectivesComponent },
             { path: 'home', component: HomeComponent },
-            { path: 'http', component: HttpComponent },
             { path: 'model-driven-forms', component: ModelDrivenFormsComponent },
             { path: 'pipes', component: PipesComponent },
             { path: 'services', component: ServicesComponent },
